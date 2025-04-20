@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zahratohidipix</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: #222;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #1a1a1a;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #999;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Zahratohidipix</h1>
+  </header>
+
+  <nav>
+    <a href="#street">Street</a>
+    <a href="#portrait">Portrait</a>
+    <a href="#documentary">Documentary</a>
+    <a href="#fineart">Fine Art</a>
+  </nav>
+
+  <section id="street">
+    <h2>Street Photography</h2>
+    <div class="gallery">
+      <img src="street1.jpeg" alt="Street 1">
+      <img src="street2.jpeg" alt="Street 2">
+    </div>
+  </section>
+
+  <section id="portrait">
+    <h2>Portrait Photography</h2>
+    <div class="gallery">
+      <img src="portrait1.jpeg" alt="Portrait 1">
+      <img src="portrait2.jpeg" alt="Portrait 2">
+    </div>
+  </section>
+
+  <section id="documentary">
+    <h2>Documentary Photography</h2>
+    <div class="gallery">
+      <img src="doc1.jpeg" alt="Documentary 1">
+      <img src="doc2.jpeg" alt="Documentary 2">
+    </div>
+  </section>
+
+  <section id="fineart">
+    <h2>Fine Art Photography</h2>
+    <div class="gallery">
+      <img src="fineart1.jpeg" alt="Fine Art 1">
+      <img src="fineart2.jpeg" alt="Fine Art 2">
+    </div>
+  </section>
+
+</body>
+</html>
