@@ -111,7 +111,11 @@ user-drag: none;
  </style>
 </head>
 <script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
+  document.addEventListener('contextmenu', event => {
+    if (event.target.tagName === 'IMG') {
+      event.preventDefault();
+    }
+  });
 </script>
   <body>
 
