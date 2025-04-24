@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Zahratohidipix</title>
 
-  <!-- استایل Lightbox -->
+  <!-- Lightbox CSS -->
   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
 
   <style>
@@ -83,14 +83,6 @@
 </head>
 <body>
 
-  <script>
-    document.addEventListener('contextmenu', event => {
-      if (event.target.tagName === 'IMG') {
-        event.preventDefault();
-      }
-    });
-  </script>
-
   <header>
     <h1>Zahratohidipix</h1>
   </header>
@@ -141,8 +133,17 @@
     </div>
   </section>
 
-  <!-- اسکریپت Lightbox -->
+  <!-- Lightbox Script -->
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+
+  <!-- Block Right Click on Images -->
+  <script>
+    document.addEventListener('contextmenu', event => {
+      if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+      }
+    });
+  </script>
 
 </body>
 </html>
