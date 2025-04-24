@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zahratohidipix</title>
+  <title>Gallery with Lightbox</title>
 
   <!-- Lightbox CSS -->
   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
@@ -122,7 +122,7 @@
 <body>
 
   <header>
-    <h1>Zahratohidipix</h1>
+    <h1>Gallery with Lightbox</h1>
   </header>
 
   <nav>
@@ -207,7 +207,7 @@
   <!-- Block Right Click on Images -->
   <script>
     document.addEventListener('contextmenu', event => {
-      if (event.target.classList.contains('image-box')) {
+      if (event.target.closest('.image-box')) {
         event.preventDefault(); // جلوگیری از راست کلیک بر روی div ها
       }
     });
