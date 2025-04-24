@@ -85,8 +85,10 @@
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 
-    .gallery a img {
-      pointer-events: none; /* جلوگیری از تعامل مستقیم با تصویر */
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     /* تغییر سایز تصاویر در اندازه‌های مختلف صفحه */
@@ -126,39 +128,69 @@
   <section id="street">
     <h2>Street Photography</h2>
     <div class="gallery">
-      <a href="street1.png" style="background-image: url('street1.png')" data-lightbox="street"></a>
-      <a href="street3.png" style="background-image: url('street3.png')" data-lightbox="street"></a>
-      <a href="street5.png" style="background-image: url('street5.png')" data-lightbox="street"></a>
-      <a href="street6.png" style="background-image: url('street6.png')" data-lightbox="street"></a>
+      <a href="street1.png" data-lightbox="street">
+        <img src="street1.png" alt="Street 1">
+      </a>
+      <a href="street3.png" data-lightbox="street">
+        <img src="street3.png" alt="Street 3">
+      </a>
+      <a href="street5.png" data-lightbox="street">
+        <img src="street5.png" alt="Street 5">
+      </a>
+      <a href="street6.png" data-lightbox="street">
+        <img src="street6.png" alt="Street 6">
+      </a>
     </div>
   </section>
 
   <section id="portrait">
     <h2>Portrait Photography</h2>
     <div class="gallery">
-      <a href="portrait1.png" style="background-image: url('portrait1.png')" data-lightbox="portrait"></a>
-      <a href="portrait2.png" style="background-image: url('portrait2.png')" data-lightbox="portrait"></a>
-      <a href="portrait3.png" style="background-image: url('portrait3.png')" data-lightbox="portrait"></a>
-      <a href="portrait4.png" style="background-image: url('portrait4.png')" data-lightbox="portrait"></a>
+      <a href="portrait1.png" data-lightbox="portrait">
+        <img src="portrait1.png" alt="Portrait 1">
+      </a>
+      <a href="portrait2.png" data-lightbox="portrait">
+        <img src="portrait2.png" alt="Portrait 2">
+      </a>
+      <a href="portrait3.png" data-lightbox="portrait">
+        <img src="portrait3.png" alt="Portrait 3">
+      </a>
+      <a href="portrait4.png" data-lightbox="portrait">
+        <img src="portrait4.png" alt="Portrait 4">
+      </a>
     </div>
   </section>
 
   <section id="documentary">
     <h2>Documentary Photography</h2>
     <div class="gallery">
-      <a href="documentary1.png" style="background-image: url('documentary1.png')" data-lightbox="documentary"></a>
-      <a href="documentary2.png" style="background-image: url('documentary2.png')" data-lightbox="documentary"></a>
-      <a href="documentary3.png" style="background-image: url('documentary3.png')" data-lightbox="documentary"></a>
-      <a href="documentary4.png" style="background-image: url('documentary4.png')" data-lightbox="documentary"></a>
+      <a href="documentary1.png" data-lightbox="documentary">
+        <img src="documentary1.png" alt="Documentary 1">
+      </a>
+      <a href="documentary2.png" data-lightbox="documentary">
+        <img src="documentary2.png" alt="Documentary 2">
+      </a>
+      <a href="documentary3.png" data-lightbox="documentary">
+        <img src="documentary3.png" alt="Documentary 3">
+      </a>
+      <a href="documentary4.png" data-lightbox="documentary">
+        <img src="documentary4.png" alt="Documentary 4">
+      </a>
     </div>
   </section>
 
   <section id="minimal">
     <h2>Minimal Photography</h2>
     <div class="gallery">
-      <a href="minimal3.png" style="background-image: url('minimal3.png')" data-lightbox="minimal"></a>
-      <a href="minimal4.png" style="background-image: url('minimal4.png')" data-lightbox="minimal"></a>
-      <a href="minimal5.png" style="background-image: url('minimal5.png')" data-lightbox="minimal"></a>
+      <a href="minimal3.png" data-lightbox="minimal">
+        <img src="minimal3.png" alt="Minimal 3">
+      </a>
+      <a href="minimal4.png" data-lightbox="minimal">
+        <img src="minimal4.png" alt="Minimal 4">
+      </a>
+      <a href="minimal5.png" data-lightbox="minimal">
+        <img src="minimal5.png" alt="Minimal 5">
+      </a>
     </div>
   </section>
 
@@ -167,16 +199,10 @@
 
   <!-- Block Right Click on Images -->
   <script>
-    // جلوگیری از راست کلیک هنگام باز شدن Lightbox
-    lightbox.option({
-      'wrapAround': true,
-      'alwaysShowNavOnTouchDevices': true,
-    });
-
-    // غیرفعال کردن راست کلیک بر روی تصاویر بزرگ شده در Lightbox
+    // جلوگیری از راست کلیک
     document.addEventListener('contextmenu', function(e) {
       if (e.target.tagName === 'IMG') {
-        e.preventDefault(); // جلوگیری از راست کلیک بر روی تصاویر بزرگ شده در Lightbox
+        e.preventDefault(); // جلوگیری از راست کلیک بر روی تصاویر
       }
     });
   </script>
