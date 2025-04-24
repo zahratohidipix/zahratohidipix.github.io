@@ -89,11 +89,6 @@
       pointer-events: none; /* جلوگیری از تعامل مستقیم با تصویر */
     }
 
-    /* غیرفعال کردن راست‌کلیک با JavaScript */
-    .gallery a {
-      pointer-events: none;
-    }
-
     /* تغییر سایز تصاویر در اندازه‌های مختلف صفحه */
     @media (max-width: 768px) {
       .gallery a {
@@ -178,10 +173,10 @@
       'alwaysShowNavOnTouchDevices': true,
     });
 
-    // غیرفعال کردن راست کلیک بر روی تصاویر در Lightbox
+    // غیرفعال کردن راست کلیک بر روی تصاویر بزرگ شده در Lightbox
     document.addEventListener('contextmenu', function(e) {
       if (e.target.tagName === 'IMG') {
-        e.preventDefault(); // جلوگیری از راست کلیک
+        e.preventDefault(); // جلوگیری از راست کلیک بر روی تصاویر بزرگ شده در Lightbox
       }
     });
   </script>
