@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery with Background Images</title>
+  <title>Zahratohidipix</title>
 
   <!-- Lightbox CSS -->
   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
@@ -66,6 +66,7 @@
       justify-content: center;
     }
 
+    /* استایل عمومی برای تمامی تصاویر در گالری */
     .gallery a {
       position: relative;
       display: block;
@@ -73,39 +74,46 @@
       height: 200px;
       border-radius: 8px;
       overflow: hidden;
-      background-color: #222;
       background-size: cover;
       background-position: center;
-      transition: transform 0.2s ease;
+      background-repeat: no-repeat;
     }
 
+    /* افکت hover بر روی تصاویر */
     .gallery a:hover {
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 
-    /* جلوگیری از ذخیره‌سازی با جلوگیری از راست‌کلیک */
-    .gallery a {
-      pointer-events: none;
+    .gallery a img {
+      pointer-events: none; /* جلوگیری از تعامل مستقیم با تصویر */
     }
 
-    /* جلوگیری از راست‌کلیک و استفاده از تصویر به عنوان بک‌گراند */
-    .gallery a .image-box {
-      pointer-events: none;
-    }
-
+    /* تغییر سایز تصاویر در اندازه‌های مختلف صفحه */
     @media (max-width: 768px) {
       .gallery a {
         width: 100%;
         height: auto;
       }
     }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Gallery with Background Images</h1>
+    <h1>Zahratohidipix</h1>
   </header>
 
   <nav>
@@ -118,39 +126,39 @@
   <section id="street">
     <h2>Street Photography</h2>
     <div class="gallery">
-      <a href="street1.png" data-lightbox="street" style="background-image: url('street1.png');"></a>
-      <a href="street3.png" data-lightbox="street" style="background-image: url('street3.png');"></a>
-      <a href="street5.png" data-lightbox="street" style="background-image: url('street5.png');"></a>
-      <a href="street6.png" data-lightbox="street" style="background-image: url('street6.png');"></a>
+      <a href="street1.png" style="background-image: url('street1.png')" data-lightbox="street"></a>
+      <a href="street3.png" style="background-image: url('street3.png')" data-lightbox="street"></a>
+      <a href="street5.png" style="background-image: url('street5.png')" data-lightbox="street"></a>
+      <a href="street6.png" style="background-image: url('street6.png')" data-lightbox="street"></a>
     </div>
   </section>
 
   <section id="portrait">
     <h2>Portrait Photography</h2>
     <div class="gallery">
-      <a href="portrait1.png" data-lightbox="portrait" style="background-image: url('portrait1.png');"></a>
-      <a href="portrait2.png" data-lightbox="portrait" style="background-image: url('portrait2.png');"></a>
-      <a href="portrait3.png" data-lightbox="portrait" style="background-image: url('portrait3.png');"></a>
-      <a href="portrait4.png" data-lightbox="portrait" style="background-image: url('portrait4.png');"></a>
+      <a href="portrait1.png" style="background-image: url('portrait1.png')" data-lightbox="portrait"></a>
+      <a href="portrait2.png" style="background-image: url('portrait2.png')" data-lightbox="portrait"></a>
+      <a href="portrait3.png" style="background-image: url('portrait3.png')" data-lightbox="portrait"></a>
+      <a href="portrait4.png" style="background-image: url('portrait4.png')" data-lightbox="portrait"></a>
     </div>
   </section>
 
   <section id="documentary">
     <h2>Documentary Photography</h2>
     <div class="gallery">
-      <a href="documentary1.png" data-lightbox="documentary" style="background-image: url('documentary1.png');"></a>
-      <a href="documentary2.png" data-lightbox="documentary" style="background-image: url('documentary2.png');"></a>
-      <a href="documentary3.png" data-lightbox="documentary" style="background-image: url('documentary3.png');"></a>
-      <a href="documentary4.png" data-lightbox="documentary" style="background-image: url('documentary4.png');"></a>
+      <a href="documentary1.png" style="background-image: url('documentary1.png')" data-lightbox="documentary"></a>
+      <a href="documentary2.png" style="background-image: url('documentary2.png')" data-lightbox="documentary"></a>
+      <a href="documentary3.png" style="background-image: url('documentary3.png')" data-lightbox="documentary"></a>
+      <a href="documentary4.png" style="background-image: url('documentary4.png')" data-lightbox="documentary"></a>
     </div>
   </section>
 
   <section id="minimal">
     <h2>Minimal Photography</h2>
     <div class="gallery">
-      <a href="minimal3.png" data-lightbox="minimal" style="background-image: url('minimal3.png');"></a>
-      <a href="minimal4.png" data-lightbox="minimal" style="background-image: url('minimal4.png');"></a>
-      <a href="minimal5.png" data-lightbox="minimal" style="background-image: url('minimal5.png');"></a>
+      <a href="minimal3.png" style="background-image: url('minimal3.png')" data-lightbox="minimal"></a>
+      <a href="minimal4.png" style="background-image: url('minimal4.png')" data-lightbox="minimal"></a>
+      <a href="minimal5.png" style="background-image: url('minimal5.png')" data-lightbox="minimal"></a>
     </div>
   </section>
 
@@ -159,9 +167,16 @@
 
   <!-- Block Right Click on Images -->
   <script>
-    document.addEventListener('contextmenu', event => {
-      if (event.target.closest('.gallery a')) {
-        event.preventDefault(); // جلوگیری از راست کلیک بر روی div ها
+    // جلوگیری از راست کلیک هنگام باز شدن Lightbox
+    lightbox.option({
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true,
+    });
+
+    // غیرفعال کردن راست کلیک بر روی تصاویر بزرگ شده در Lightbox
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault(); // جلوگیری از راست کلیک بر روی تصاویر بزرگ شده در Lightbox
       }
     });
   </script>
