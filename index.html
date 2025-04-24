@@ -173,8 +173,8 @@
   <!-- Block Right Click on Images -->
   <script>
     document.addEventListener('contextmenu', event => {
-      if (event.target.tagName === 'A') {
-        event.preventDefault(); // جلوگیری از راست‌کلیک بر روی لینک‌ها
+      if (event.target.tagName === 'A' || event.target.tagName === 'IMG') {
+        event.preventDefault(); // جلوگیری از راست‌کلیک بر روی لینک‌ها و تصاویر
       }
     });
   </script>
