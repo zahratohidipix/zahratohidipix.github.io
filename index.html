@@ -172,9 +172,16 @@
 
   <!-- Block Right Click on Images -->
   <script>
-    document.addEventListener('contextmenu', event => {
-      if (event.target.tagName === 'A' || event.target.tagName === 'IMG') {
-        event.preventDefault(); // جلوگیری از راست‌کلیک بر روی لینک‌ها و تصاویر
+    // جلوگیری از راست کلیک هنگام باز شدن Lightbox
+    lightbox.option({
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true,
+    });
+
+    // غیرفعال کردن راست کلیک بر روی تصاویر در Lightbox
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault(); // جلوگیری از راست کلیک
       }
     });
   </script>
