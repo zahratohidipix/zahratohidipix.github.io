@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zahratohidipix</title>
-
-  <!-- Lightbox CSS -->
   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
 
   <style>
@@ -16,18 +14,15 @@
       margin: 0;
       padding: 0;
     }
-
     header {
       padding: 2rem;
       text-align: center;
       background-color: #222;
     }
-
     header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
-
     nav {
       display: flex;
       justify-content: center;
@@ -35,22 +30,18 @@
       background-color: #1a1a1a;
       padding: 1rem 0;
     }
-
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
-
     nav a:hover {
       color: #999;
     }
-
     section {
       padding: 2rem;
     }
-
     section h2 {
       text-align: center;
       font-size: 2rem;
@@ -58,15 +49,12 @@
       border-bottom: 2px solid #555;
       padding-bottom: 10px;
     }
-
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
-
-    /* استایل عمومی برای تمامی تصاویر در گالری */
     .gallery a {
       position: relative;
       display: block;
@@ -78,36 +66,28 @@
       background-position: center;
       background-repeat: no-repeat;
     }
-
-    /* افکت hover بر روی تصاویر */
     .gallery a:hover {
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
-
     .gallery a img {
-      pointer-events: none; /* جلوگیری از تعامل مستقیم با تصویر */
+      pointer-events: none;
     }
-
-    /* تغییر سایز تصاویر در اندازه‌های مختلف صفحه */
     @media (max-width: 768px) {
       .gallery a {
         width: 100%;
         height: auto;
       }
     }
-
     @media (max-width: 480px) {
       nav {
         flex-direction: column;
         gap: 1rem;
       }
-
       header h1 {
         font-size: 2rem;
       }
     }
-
   </style>
 </head>
 <body>
@@ -120,7 +100,7 @@
     <a href="#street">Street</a>
     <a href="#portrait">Portrait</a>
     <a href="#documentary">Documentary</a>
-    <a href="#minimal">Minimal</a>
+    <a href="#minimal">The color collection</a>
   </nav>
 
   <section id="street">
@@ -170,7 +150,7 @@
   </section>
 
   <section id="minimal">
-    <h2>Minimal Photography</h2>
+    <h2>The color collection</h2>
     <div class="gallery">
       <a href="minimal3.png" style="background-image: url('minimal3.png')" data-lightbox="minimal"></a>
       <a href="minimal4.png" style="background-image: url('minimal4.png')" data-lightbox="minimal"></a>
@@ -178,21 +158,16 @@
     </div>
   </section>
 
-  <!-- Lightbox Script -->
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-
-  <!-- Block Right Click on Images -->
   <script>
-    // جلوگیری از راست کلیک هنگام باز شدن Lightbox
     lightbox.option({
       'wrapAround': true,
       'alwaysShowNavOnTouchDevices': true,
     });
 
-    // غیرفعال کردن راست کلیک بر روی تصاویر بزرگ شده در Lightbox
     document.addEventListener('contextmenu', function(e) {
       if (e.target.tagName === 'IMG') {
-        e.preventDefault(); // جلوگیری از راست کلیک بر روی تصاویر بزرگ شده در Lightbox
+        e.preventDefault();
       }
     });
   </script>
