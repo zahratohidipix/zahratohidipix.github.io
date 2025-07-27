@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zahratohidipix</title>
-  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
 
   <style>
     body {
@@ -14,15 +14,18 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       padding: 2rem;
       text-align: center;
       background-color: #222;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5rem;
     }
+
     nav {
       display: flex;
       justify-content: center;
@@ -30,18 +33,22 @@
       background-color: #1a1a1a;
       padding: 1rem 0;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #999;
     }
+
     section {
       padding: 2rem;
     }
+
     section h2 {
       text-align: center;
       font-size: 2rem;
@@ -49,41 +56,47 @@
       border-bottom: 2px solid #555;
       padding-bottom: 10px;
     }
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
+
     .gallery a {
       position: relative;
       display: block;
       width: 300px;
-      height: 200px;
+      aspect-ratio: 3 / 2;
       border-radius: 8px;
       overflow: hidden;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
+
     .gallery a:hover {
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
+
     .gallery a img {
       pointer-events: none;
     }
+
     @media (max-width: 768px) {
       .gallery a {
         width: 100%;
-        height: auto;
       }
     }
+
     @media (max-width: 480px) {
       nav {
         flex-direction: column;
         gap: 1rem;
       }
+
       header h1 {
         font-size: 2rem;
       }
@@ -106,6 +119,7 @@
   <section id="street">
     <h2>Street Photography</h2>
     <div class="gallery">
+      <!-- تصاویر استریت -->
       <a href="street1.png" style="background-image: url('street1.png')" data-lightbox="street"></a>
       <a href="street2.png" style="background-image: url('street2.png')" data-lightbox="street"></a>
       <a href="street3.png" style="background-image: url('street3.png')" data-lightbox="street"></a>
@@ -120,6 +134,7 @@
   <section id="portrait">
     <h2>Portrait Photography</h2>
     <div class="gallery">
+      <!-- تصاویر پرتره -->
       <a href="portrait1.png" style="background-image: url('portrait1.png')" data-lightbox="portrait"></a>
       <a href="portrait2.png" style="background-image: url('portrait2.png')" data-lightbox="portrait"></a>
       <a href="portrait3.png" style="background-image: url('portrait3.png')" data-lightbox="portrait"></a>
@@ -134,6 +149,7 @@
   <section id="documentary">
     <h2>Documentary Photography</h2>
     <div class="gallery">
+      <!-- تصاویر داکیومنتری -->
       <a href="documentary1.png" style="background-image: url('documentary1.png')" data-lightbox="documentary"></a>
       <a href="documentary2.png" style="background-image: url('documentary2.png')" data-lightbox="documentary"></a>
       <a href="documentary3.png" style="background-image: url('documentary3.png')" data-lightbox="documentary"></a>
@@ -152,6 +168,7 @@
   <section id="color">
     <h2>The color collection</h2>
     <div class="gallery">
+      <!-- تصاویر کالر -->
       <a href="color1.png" style="background-image: url('color1.png')" data-lightbox="color"></a>
       <a href="color2.png" style="background-image: url('color2.png')" data-lightbox="color"></a>
       <a href="color3.png" style="background-image: url('color3.png')" data-lightbox="color"></a>
@@ -167,7 +184,7 @@
       <a href="color13.png" style="background-image: url('color13.png')" data-lightbox="color"></a>
       <a href="color14.png" style="background-image: url('color14.png')" data-lightbox="color"></a>
       <a href="color15.png" style="background-image: url('color15.png')" data-lightbox="color"></a>
-      <a href="color16.png" style="background-image: url('color16.png')" data-lightbox="color"></a> 
+      <a href="color16.png" style="background-image: url('color16.png')" data-lightbox="color"></a>
     </div>
   </section>
 
@@ -184,6 +201,5 @@
       }
     });
   </script>
-
 </body>
 </html>
